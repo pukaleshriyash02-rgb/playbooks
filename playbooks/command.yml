@@ -1,0 +1,9 @@
+---
+- name: Check uptime
+  hosts: webserver
+  become: yes
+
+  tasks:
+    - name: Show uptime
+      command: uptime
+

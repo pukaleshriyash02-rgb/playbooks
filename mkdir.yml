@@ -1,0 +1,11 @@
+---
+- name: Create directory
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create /opt/devops folder
+      file:
+        path: /opt/devops
+        state: directory
+
