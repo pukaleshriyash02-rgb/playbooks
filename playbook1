@@ -1,0 +1,12 @@
+---
+- name: User with homedir and shell
+  hosts: webserver
+  become: yes
+  tasks:
+
+    - name: Add devops user and give shell + home dir
+      user:
+        name: devops
+        shell: /bin/bash
+        create_home: yes
+

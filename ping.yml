@@ -1,0 +1,9 @@
+---
+- name: Test connectivity to web servers
+  hosts: webserver
+  become: yes
+  tasks:
+
+    - name: Ping the servers
+      ping:
+
