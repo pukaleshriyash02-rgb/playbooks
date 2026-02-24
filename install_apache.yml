@@ -1,0 +1,24 @@
+---
+- name: Install Apache Web Server
+  hosts: webserver
+  become: yes
+  gather_facts: yes
+
+  tasks:
+
+    - name: Install httpd package
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start httpd service
+      service:
+        name: httpd
+        state: started
+
+    - name: Enable httpd at boot
+      service:
+        name: httpd
+        enabled: yes
+
+

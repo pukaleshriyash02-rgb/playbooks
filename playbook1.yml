@@ -1,6 +1,6 @@
 ---
 - name: User with homedir and shell
-  hosts: webservers
+  hosts: webserver
   become: yes
   tasks:
 
